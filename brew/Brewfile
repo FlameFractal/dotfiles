@@ -4,6 +4,7 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "mongodb/brew"
 # core
+brew "bash"
 brew "coreutils"
 brew "erlang"
 brew "git"

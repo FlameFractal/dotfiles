@@ -1,7 +1,2 @@
-#!/bin/bash
-
-# custom cd
 alias ll="ls -halF"
-chpwd() ll
-
 alias speedtest="curl -s https://raw.githubusercontent.com/flamefractal/speedtest-cli/master/speedtest.py | python -"

@@ -1,4 +1,5 @@
 #!/bin/bash
+mv ~/.bash_profile ~/.bash_profile.old
 bash $HOME/dotfiles/ssh/install
 bash $HOME/dotfiles/bash/install
 bash $HOME/dotfiles/brew/install

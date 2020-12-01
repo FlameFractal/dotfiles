@@ -1,2 +1,2 @@
 #!/bin/bash
-source $HOME/dotfiles/git/aliases
+cat $HOME/dotfiles/git/aliases >> ~/.bash_profile && source ~/.bash_profile

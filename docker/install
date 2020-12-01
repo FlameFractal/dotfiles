@@ -1,0 +1,2 @@
+#!/bin/bash
+cat $HOME/dotfiles/docker/aliases >> ~/.bash_profile && source ~/.bash_profile

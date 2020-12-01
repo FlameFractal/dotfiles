@@ -1,2 +1,3 @@
 #!/bin/bash
 ln -sf $HOME/dotfiles/bash/bashrc $HOME/.bashrc
+source $HOME/dotfiles/bash/aliases

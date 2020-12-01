@@ -1,0 +1,4 @@
+#!/bin/bash
+mkdir -p ~/.ssh && chmod 700 ~/.ssh
+ln $HOME/dotfiles/ssh/config ~/.ssh/config
+chmod 600 ~/.ssh/config

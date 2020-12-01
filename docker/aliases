@@ -1,0 +1,3 @@
+alias rabbitmq="docker run -d --rm --name rabbitmq -p 6372:6372 -p 16372:16372 rabbitmq:3-alpine"
+alias redis="docker run -d --rm --name redis --net redis -p 6379:6379 redis:6.0-alpine redis-server"
+

@@ -1,0 +1,2 @@
+#!/bin/bash
+ln $HOME/dotfiles/bash/bashrc $HOME/.bashrc

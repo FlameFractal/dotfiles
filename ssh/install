@@ -2,3 +2,7 @@
 mkdir -p ~/.ssh && chmod 700 ~/.ssh
 ln -sf $HOME/dotfiles/ssh/config ~/.ssh/config
 chmod 600 ~/.ssh/config
+
+# add github/flamefractal public key
+GITHUB_KEY=$(curl -s https://api.github.com/users/flamefractal/keys | jq -r '.[0].key')
+echo ${GITHUB_KEY} 'vishg8@gmail.com' > ~/.ssh/id_ed25519.pub

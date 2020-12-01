@@ -1,0 +1,36 @@
+function git() {
+	case $* in
+		author* ) shift 1; command git shortlog -s -n "$@";;
+		* ) command git "$@" ;;
+	esac
+}
+
+# git config --global pager.diff false
+
+alias gs="git status"
+alias ga="git add"
+alias gb="git branch --sort=-committerdate"
+alias gd="git diff -w"
+alias gds="git diff -w --staged"
+alias gss="git stash save"
+alias gcm="git commit -m"
+alias gco="git checkout"
+alias gf="git fetch"
+alias gpo="git pull origin"
+alias gpr="git pull origin --rebase"
+
+alias git-pull-master='branch=master; for i in */.git; do ( echo $i; cd $i/.. > /dev/null; git checkout $branch -q && git pull --no-edit origin $branch -q; git branch --show-current); done'
+
+# Git Housekeeping
+
+# git remote prune origin;
+# git fetch -p;
+# git gc;
+# git repack
+# 
+# git push origin --delete users/vishal/perf
+# git log --branches --not --remotes
+# git log --branches --not --remotes --simplify-by-decoration --decorate --oneline
+
+  
+# for i in */.git; do ( echo $i; cd $i/.. > /dev/null; git checkout master; git branch --merged | grep -v '*' | xargs -I {} sh -c 'git branch -d {} | echo \"git push -d origin {}\"' | git fetch -p;); done

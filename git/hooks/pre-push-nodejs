@@ -1,0 +1,30 @@
+#!/bin/bash
+
+export NVM_DIR="$HOME/.nvm"
+
+if git rev-parse --verify HEAD >/dev/null 2>&1
+then
+	against=HEAD
+else
+	# Initial commit: diff against an empty tree object
+	against=$(git mktree </dev/null)
+fi
+
+# Redirect output to stderr.
+exec 1>&2
+
+# Try to start node
+if [[ -f server.js ]]; then
+	timeout --foreground 10 node server.js
+elif [[ -f index.js ]]; then
+	timeout --foreground 10 node index.js
+else
+	echo $'\nINFO:' "pre-push-nodejs: could not find server.js/index.js"
+fi
+
+exit_code=$?
+if [[ $exit_code = 124 ]]; then exit_code=0; fi
+
+echo $'\nINFO:' "pre-push-nodejs: exit code is ${exit_code}" $'\n'
+
+exit $exit_code

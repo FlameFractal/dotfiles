@@ -1,2 +1,2 @@
 #!/bin/bash
-ln $HOME/dotfiles/vim/vimrc $HOME/.vimrc
+ln -sf $HOME/dotfiles/vim/vimrc $HOME/.vimrc

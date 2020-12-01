@@ -1,0 +1,3 @@
+[submodule "git/git-source"]
+	path = git/git-source
+	url = git@github.com:git/git.git

@@ -1,3 +1,0 @@
-alias ls="ls -GF"
-alias ll="ls -lah"
-alias speedtest="curl -s https://raw.githubusercontent.com/flamefractal/speedtest-cli/master/speedtest.py | python -"

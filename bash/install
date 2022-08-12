@@ -1,8 +1,0 @@
-#!/bin/bash
-ln -sf $HOME/dotfiles/bash/bashrc $HOME/.bashrc
-echo "source $HOME/.bashrc" >> ~/.bash_profile && source ~/.bash_profile
-cat $HOME/dotfiles/bash/aliases >> ~/.bash_profile && source ~/.bash_profile
-
-# change default shell to brew bash
-# echo $(brew --prefix)/bin/bash | sudo tee -a /private/etc/shells
-# chpass -s /usr/local/bin/bash ${whoami}

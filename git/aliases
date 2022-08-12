@@ -15,11 +15,16 @@ alias gds="git diff -w --staged"
 alias gss="git stash save"
 alias gcm="git commit -m"
 alias gco="git checkout"
-alias gf="git fetch"
+alias gcb="git checkout -b"
+alias gfo="git fetch origin"
 alias gpo="git pull origin"
-alias gpr="git pull origin --rebase"
+alias gpr="git pull --rebase origin"
+alias glc="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit | less"
 
-alias gitpullmaster='branch=master; for i in */.git; do ( echo $i; cd $i/.. > /dev/null; git checkout $branch -q && git pull --no-edit origin $branch -q; git branch --show-current); done'
+alias pullmastersub='branch=master; for i in */.git; do ( echo $i; cd $i/.. > /dev/null; git checkout $branch -q && git pull --no-edit origin $branch -q; git branch --show-current); done'
+
+# This is currently causing problems (fails when you run it anywhere that isn't a git project's root directory)
+alias vs="v `git status --porcelain | sed -ne 's/^ M //p'`"
 
 # Git Housekeeping
 
@@ -32,5 +37,7 @@ alias gitpullmaster='branch=master; for i in */.git; do ( echo $i; cd $i/.. > /d
 # git log --branches --not --remotes
 # git log --branches --not --remotes --simplify-by-decoration --decorate --oneline
 
-  
+# for i in */.git; do ( echo $i; cd $i/.. > /dev/null; git checkout master; git branch --merged | grep -v '*'); done
 # for i in */.git; do ( echo $i; cd $i/.. > /dev/null; git checkout master; git branch --merged | grep -v '*' | xargs -I {} sh -c 'git branch -d {} | echo \"git push -d origin {}\"' | git fetch -p;); done
+
+# git branch --merged | egrep -v "(^\*|master|main|dev|next)" | xargs git branch -d

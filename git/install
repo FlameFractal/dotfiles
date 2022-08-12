@@ -1,5 +1,4 @@
 #!/bin/bash
-cat $HOME/dotfiles/git/aliases >> ~/.bash_profile && source ~/.bash_profile
 
 # enable contribs
 echo ". $HOME/dotfiles/git/git-source/contrib/completion/git-completion.bash" >> ~/.bash_profile

@@ -1,3 +1,5 @@
+source $HOME/dotfiles/zsh/myzshrc
+
 # Vars
 	HISTFILE=~/.zsh_history
 	SAVEHIST=1000 
@@ -9,26 +11,6 @@
 # Aliases
 	alias v="vim -p"
 	mkdir -p /tmp/log
-
-
-	alias glc="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit | less"
-	alias nrd="npm run dev"
-	alias nrs="npm run serve"
-
-	alias gs="git status"
-	alias gco="git checkout"
-	alias gb="git branch"
-	alias gd="git diff -w"
-	alias gds="git diff -w --staged"
-	alias gcm="git commit -m"
-	alias gfo="git fetch origin"
-	alias gpr="git pull --rebase origin"
-	alias ga="git add"
-	alias gcb="git checkout -b"
-	alias gss="git stash save"
-
-	# This is currently causing problems (fails when you run it anywhere that isn't a git project's root directory)
-	# alias vs="v `git status --porcelain | sed -ne 's/^ M //p'`"
 
 # Settings
 	export VISUAL=vim

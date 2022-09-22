@@ -24,7 +24,7 @@ alias glc="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset 
 alias pullmastersub='branch=master; for i in */.git; do ( echo $i; cd $i/.. > /dev/null; git checkout $branch -q && git pull --no-edit origin $branch -q; git branch --show-current); done'
 
 # This is currently causing problems (fails when you run it anywhere that isn't a git project's root directory)
-alias vs="v `git status --porcelain | sed -ne 's/^ M //p'`"
+# alias vs="v `git status --porcelain | sed -ne 's/^ M //p'`"
 
 # Git Housekeeping
 

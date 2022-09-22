@@ -18,6 +18,7 @@ brew "mkcert"
 # dev
 brew "python@3.9", link: true
 brew "mongodb/brew/mongodb-community"
+brew "mongodb/brew/mongodbsh"
 # cask "robo-3t"
 # cask "iterm2"
 # cask "sublime-text"

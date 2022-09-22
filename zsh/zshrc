@@ -5,7 +5,8 @@
 
 alias ls="ls -GF"
 alias ll="ls -lah"
-alias speedtest="curl -s https://raw.githubusercontent.com/flamefractal/speedtest-cli/master/speedtest.py | python -"
+alias speedtest="curl -s https://raw.githubusercontent.com/flamefractal/speedtest-cli/master/speedtest.py | python3 -"
+alias macscreentime="curl -s https://raw.githubusercontent.com/flamefractal/screen-on-time/main/src/screen_on_time.py | python3 -s"
 
 # Git
 

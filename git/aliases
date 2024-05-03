@@ -1,7 +1,10 @@
 function git() {
 	case $* in
-		author* ) shift 1; command git shortlog -s -n "$@";;
-		* ) command git "$@" ;;
+	author*)
+		shift 1
+		command git shortlog -s -n "$@"
+		;;
+	*) command git "$@" ;;
 	esac
 }
 
@@ -20,7 +23,6 @@ alias gfo="git fetch origin"
 alias gpo="git pull origin"
 alias gpr="git pull --rebase origin"
 alias glc="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit | less"
-
 alias pullmastersub='branch=master; for i in */.git; do ( echo $i; cd $i/.. > /dev/null; git checkout $branch -q && git pull --no-edit origin $branch -q; git branch --show-current); done'
 
 # This is currently causing problems (fails when you run it anywhere that isn't a git project's root directory)
@@ -32,7 +34,7 @@ alias pullmastersub='branch=master; for i in */.git; do ( echo $i; cd $i/.. > /d
 # git fetch -p;
 # git gc;
 # git repack
-# 
+#
 # git push origin --delete users/vishal/perf
 # git log --branches --not --remotes
 # git log --branches --not --remotes --simplify-by-decoration --decorate --oneline
